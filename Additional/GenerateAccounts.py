@@ -6,7 +6,7 @@ from Crypto.Util.Padding import pad
 def register(region):
     s = b'2ee44819e9b4598845141067b281621874d0d5d7af9d8f7e00c1e54715b7d1e3'
     cid = "100067"
-    ua = "GarenaMSDK/4.0.19P9(SM-S908E; Android 11; en; IN)"
+    ua = "GarenaMSDK/4.0.19P9(SM-S908E; Android 11; en; TH)"
     session = requests.Session()
     def e(x):
         k = [0,0,0,2,0,1,7,0,0,0,0,0,2,0,1,7,0,0,0,0,0,2,0,1,7,0,0,0,0,0,2,0]
