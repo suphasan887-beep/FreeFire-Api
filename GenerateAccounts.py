@@ -1,0 +1,6 @@
+{
+    "TH": {
+        "uid": "3301470613",
+        "password": "39EFD9979BD6E9CCF6CBFF09F224C4B663E88B7093657CB3D4A6F3615DDE057A"
+    }
+}
