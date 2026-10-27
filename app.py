@@ -10,7 +10,7 @@ class ProtobufError(Exception): pass
 class APIError(Exception): pass
 
 accounts = load_accounts()
-
+print({k: bool(v.get('uid')) for k, v in accounts.items()}, flush=True)
 
 app = Flask(__name__)
 # Enable CORS for all origins on all routes
