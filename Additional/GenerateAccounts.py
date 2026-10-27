@@ -78,7 +78,7 @@ def register(region):
     return None, None
     
 
-regions = ['IND','SG','RU','ID','TW','US','VN','TH','ME','PK','CIS','BR','BD']
+regions = ['TH']
 accounts = {r: dict(zip(["uid","password"], register(r))) for r in regions}
 with open("../Configuration/AccountConfiguration.json","w") as f:
     json.dump(accounts,f,indent=4)
