@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 from Utilities.until import load_accounts
 from Api.Account import get_garena_token, get_major_login
 from Api.InGame import get_player_personal_show, get_player_stats, search_account_by_keyword
-
+class ProtobufError(Exception): pass
+class APIError(Exception): pass
 
 accounts = load_accounts()
 
@@ -22,7 +23,7 @@ CORS(app)
 def get_search_account_by_keyword():
     try:
         # Get request parameters
-        region = request.args.get('server', 'IND').upper()
+        region = request.args.get('server', 'TH').upper()
         search_term = request.args.get('keyword')
         
         # Validate keyword parameter
@@ -63,7 +64,7 @@ def get_search_account_by_keyword():
 def get_player_stat():
     try:
         # Get and validate parameters
-        server = request.args.get('server', 'IND').upper()
+        server = request.args.get('server', 'TH').upper()
         uid = request.args.get('uid')
         gamemode = request.args.get('gamemode', 'br').lower()
         matchmode = request.args.get('matchmode', 'CAREER').upper()
@@ -215,7 +216,7 @@ def get_player_stat():
 def get_account_info():
     try:
         # Get parameters with defaults
-        server = request.args.get('server', 'IND').upper()
+        server = request.args.get('server', 'TH').upper()
         uid = request.args.get('uid')
         need_gallery_info = request.args.get('need_gallery_info', False)
         need_blacklist = request.args.get('need_blacklist', False)
